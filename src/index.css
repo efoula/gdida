@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4285F4;
+  --secondary-color: #34A853;
+  --accent-color: #EA4335;
+  --success-color: #34A853;
+  --warning-color: #FBBC05;
+  --error-color: #EA4335;
+  --background-color: #F8FAFC;
+  --card-color: #FFFFFF;
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --text-tertiary: #9CA3AF;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-background text-text-primary min-h-screen;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium leading-tight;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p, li, span {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 focus:ring-primary/50;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-text-primary border border-gray-300 hover:bg-gray-50 focus:ring-primary/50;
+  }
+  
+  .btn-success {
+    @apply bg-success text-white hover:bg-success/90 focus:ring-success/50;
+  }
+  
+  .btn-error {
+    @apply bg-error text-white hover:bg-error/90 focus:ring-error/50;
+  }
+
+  .card {
+    @apply bg-card rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all;
+  }
+  
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-text-primary mb-1;
+  }
+  
+  .animate-fade-in {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+}
